@@ -42,16 +42,25 @@ class ViewController: UIViewController {
         super.viewDidLoad();
         self.title = "Tracker";
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "icloudKeyValueChanged:", name: "NSUbiquitousKeyValueStoreDidChangeExternallyNotification", object: nil)
+        NotificationCenter.default.addObserver(
+            forName: NSNotification.Name(
+                rawValue: "NSUbiquitousKeyValueStoreDidChangeExternallyNotification"
+            ),
+            object: nil,
+            queue: nil,
+            using: { (Notification) -> Void in
+                self.syncTimes()
+            }
+        )
         
-        NSUbiquitousKeyValueStore.defaultStore().synchronize()
+        NSUbiquitousKeyValueStore.default.synchronize()
         
-        self.diaperwet_Button.backgroundColor = UIColor.brownColor()
-        self.diaper_Button.backgroundColor = UIColor.brownColor()
-        self.bottle_Button.backgroundColor = UIColor.grayColor()
-        self.sleep_Button.backgroundColor = UIColor.blueColor()
+        self.diaperwet_Button.backgroundColor = UIColor.brown
+        self.diaper_Button.backgroundColor = UIColor.brown
+        self.bottle_Button.backgroundColor = UIColor.gray
+        self.sleep_Button.backgroundColor = UIColor.blue
         
-        self.store = NSUbiquitousKeyValueStore.defaultStore()
+        self.store = NSUbiquitousKeyValueStore.default
         
         syncTimes()
         
@@ -62,69 +71,76 @@ class ViewController: UIViewController {
     }
     
     @IBAction func setTimeForDiaperWet(sender: AnyObject) {
-        var date = NSDate();
-        var formatter = NSDateFormatter()
+        let date = Date();
+        let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss"
-        let dateString = formatter.stringFromDate(date)
+        let dateString = formatter.string(from: date)
         diaperwet_lastTime.text = dateString
-        store!.setString(dateString, forKey: "diaperwet_lastTime")
+        store?.set(dateString, forKey: "diaperwet_lastTime")
     }
     
     @IBAction func setTimeForDiaper(sender: AnyObject) {
-        var date = NSDate();
-        var formatter = NSDateFormatter()
+        let date = Date();
+        let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss"
-        let dateString = formatter.stringFromDate(date)
+        let dateString = formatter.string(from: date)
         diaper_lastTime.text = dateString
-        store!.setString(dateString, forKey: "diaper_lastTime")
+        store?.set(dateString, forKey: "diaper_lastTime")
     }
     
     @IBAction func setTimeForBottle(sender: AnyObject) {
-        var date = NSDate()
-        var formatter = NSDateFormatter()
+        let date = Date()
+        let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss"
-        let dateString = formatter.stringFromDate(date)
+        let dateString = formatter.string(from: date)
         bottle_lastTime.text = dateString
-        store!.setString(dateString, forKey: "bottle_lastTime")
+        store?.set(dateString, forKey: "bottle_lastTime")
     }
     
     @IBAction func setTimeForSleep(sender: AnyObject) {
-        var date = NSDate()
-        var formatter = NSDateFormatter()
+        let date = Date()
+        let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss"
-        let dateString = formatter.stringFromDate(date)
+        let dateString = formatter.string(from: date)
         sleep_lastTime.text = dateString
-        store!.setString(dateString, forKey: "sleep_lastTime")
+        store?.set(dateString, forKey: "sleep_lastTime")
     }
     
     func syncTimes() {
-        // update any changes from iCloud
-        self.store = NSUbiquitousKeyValueStore.defaultStore()
+        // Update any changes from iCloud
+        self.store = NSUbiquitousKeyValueStore.default
         
-        let diaperwet_lastTimeFromCloud = self.store?.objectForKey("diaperwet_lastTime") as String?
-        let diaper_lastTimeFromCloud = self.store?.objectForKey("diaper_lastTime") as String?
-        let bottle_lastTimeFromCloud = self.store?.objectForKey("bottle_lastTime") as String?
-        let sleep_lastTimeFromCloud = self.store?.objectForKey("sleep_lastTime") as String?
+        let diaperwet_lastTimeFromCloud = self.store?.object(
+            forKey: "diaperwet_lastTime"
+        ) as! String?
         
-        if (diaperwet_lastTimeFromCloud != nil) {
+        let diaper_lastTimeFromCloud = self.store?.object(
+            forKey: "diaper_lastTime"
+        ) as! String?
+        
+        let bottle_lastTimeFromCloud = self.store?.object(
+            forKey: "bottle_lastTime"
+        ) as! String?
+        
+        let sleep_lastTimeFromCloud = self.store?.object(
+            forKey: "sleep_lastTime"
+        ) as! String?
+        
+        if diaperwet_lastTimeFromCloud != nil {
             diaperwet_lastTime.text = diaperwet_lastTimeFromCloud
         }
         
-        if (diaper_lastTimeFromCloud != nil) {
+        if diaper_lastTimeFromCloud != nil {
             diaper_lastTime.text = diaper_lastTimeFromCloud
         }
         
-        if (bottle_lastTimeFromCloud != nil) {
+        if bottle_lastTimeFromCloud != nil {
             bottle_lastTime.text = bottle_lastTimeFromCloud
         }
         
-        if (sleep_lastTimeFromCloud != nil) {
+        if sleep_lastTimeFromCloud != nil {
             sleep_lastTime.text = sleep_lastTimeFromCloud
         }
-    }
-    
-    func icloudKeyValueChanged(notification: NSNotification) {
-        self.syncTimes()
     }
 }
 
