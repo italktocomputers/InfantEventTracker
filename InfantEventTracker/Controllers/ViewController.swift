@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2014, Andrew Schools <andrewschools@me.com>
+Copyright (c) 2022, Andrew Schools <andrewschools@me.com>
 Permission is hereby granted, free of charge, to any
 person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the
@@ -22,6 +22,7 @@ THE SOFTWARE.
 */
 
 import UIKit
+import CloudKit
 
 @objc(ViewController)
 
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        self.title = "Tracker";
+        self.title = "Infant Event Tracker";
         
         NotificationCenter.default.addObserver(
             forName: NSNotification.Name(
@@ -54,12 +55,6 @@ class ViewController: UIViewController {
         )
         
         NSUbiquitousKeyValueStore.default.synchronize()
-        
-        self.diaperwet_Button.backgroundColor = UIColor.brown
-        self.diaper_Button.backgroundColor = UIColor.brown
-        self.bottle_Button.backgroundColor = UIColor.gray
-        self.sleep_Button.backgroundColor = UIColor.blue
-        
         self.store = NSUbiquitousKeyValueStore.default
         
         syncTimes()
@@ -110,37 +105,24 @@ class ViewController: UIViewController {
         // Update any changes from iCloud
         self.store = NSUbiquitousKeyValueStore.default
         
-        let diaperwet_lastTimeFromCloud = self.store?.object(
-            forKey: "diaperwet_lastTime"
-        ) as! String?
-        
-        let diaper_lastTimeFromCloud = self.store?.object(
-            forKey: "diaper_lastTime"
-        ) as! String?
-        
-        let bottle_lastTimeFromCloud = self.store?.object(
-            forKey: "bottle_lastTime"
-        ) as! String?
-        
-        let sleep_lastTimeFromCloud = self.store?.object(
-            forKey: "sleep_lastTime"
-        ) as! String?
-        
-        if diaperwet_lastTimeFromCloud != nil {
-            diaperwet_lastTime.text = diaperwet_lastTimeFromCloud
+        if let lastTime = self.store?.object(forKey: "diaper_lastTime") as! String? {
+            diaperwet_lastTime.text = lastTime
         }
         
-        if diaper_lastTimeFromCloud != nil {
-            diaper_lastTime.text = diaper_lastTimeFromCloud
+        if let lastTime = self.store?.object(forKey: "diaperwet_lastTime") as! String? {
+            diaper_lastTime.text = lastTime
         }
         
-        if bottle_lastTimeFromCloud != nil {
-            bottle_lastTime.text = bottle_lastTimeFromCloud
+        if let lastTime = self.store?.object(forKey: "bottle_lastTime") as! String? {
+            bottle_lastTime.text = lastTime
         }
         
-        if sleep_lastTimeFromCloud != nil {
-            sleep_lastTime.text = sleep_lastTimeFromCloud
+        if let lastTime = self.store?.object(forKey: "sleep_lastTime") as! String? {
+            sleep_lastTime.text = lastTime
         }
+    }
+    @IBAction func goToHomePage(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://github.com/italktocomputers")!)
     }
 }
 
