@@ -43,20 +43,7 @@ class ViewController: UIViewController {
         super.viewDidLoad();
         self.title = "Infant Event Tracker";
         
-        NotificationCenter.default.addObserver(
-            forName: NSNotification.Name(
-                rawValue: "NSUbiquitousKeyValueStoreDidChangeExternallyNotification"
-            ),
-            object: nil,
-            queue: nil,
-            using: { (Notification) -> Void in
-                self.syncTimes()
-            }
-        )
-        
-        NSUbiquitousKeyValueStore.default.synchronize()
-        self.store = NSUbiquitousKeyValueStore.default
-        
+        EventTimes.observeStore(notify: syncTimes)
         syncTimes()
         
     }
@@ -67,57 +54,51 @@ class ViewController: UIViewController {
     
     @IBAction func setTimeForDiaperWet(sender: AnyObject) {
         let date = Date();
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss"
-        let dateString = formatter.string(from: date)
-        diaperwet_lastTime.text = dateString
-        store?.set(dateString, forKey: "diaperwet_lastTime")
+        EventTimes.triggerEvent(on: Date(), for: EventType.diaperwet_lastTime)
+        updateUI(date: date, label: diaperwet_lastTime)
     }
     
     @IBAction func setTimeForDiaper(sender: AnyObject) {
         let date = Date();
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss"
-        let dateString = formatter.string(from: date)
-        diaper_lastTime.text = dateString
-        store?.set(dateString, forKey: "diaper_lastTime")
+        EventTimes.triggerEvent(on: Date(), for: EventType.diaper_lastTime)
+        updateUI(date: date, label: diaper_lastTime)
     }
     
     @IBAction func setTimeForBottle(sender: AnyObject) {
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss"
-        let dateString = formatter.string(from: date)
-        bottle_lastTime.text = dateString
-        store?.set(dateString, forKey: "bottle_lastTime")
+        let date = Date();
+        EventTimes.triggerEvent(on: Date(), for: EventType.bottle_lastTime)
+        updateUI(date: date, label: bottle_lastTime)
     }
     
     @IBAction func setTimeForSleep(sender: AnyObject) {
-        let date = Date()
+        let date = Date();
+        EventTimes.triggerEvent(on: Date(), for: EventType.sleep_lastTime)
+        updateUI(date: date, label: sleep_lastTime)
+    }
+    
+    func updateUI(date: Date, label: UILabel) {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss"
         let dateString = formatter.string(from: date)
-        sleep_lastTime.text = dateString
-        store?.set(dateString, forKey: "sleep_lastTime")
+        label.text = dateString
     }
     
-    func syncTimes() {
-        // Update any changes from iCloud
-        self.store = NSUbiquitousKeyValueStore.default
+    func syncTimes() -> Void {
+        EventTimes.sync()
         
-        if let lastTime = self.store?.object(forKey: "diaper_lastTime") as! String? {
+        if let lastTime = EventTimes.fetchTime(for: EventType.diaperwet_lastTime) {
             diaperwet_lastTime.text = lastTime
         }
         
-        if let lastTime = self.store?.object(forKey: "diaperwet_lastTime") as! String? {
+        if let lastTime = EventTimes.fetchTime(for: EventType.diaper_lastTime) {
             diaper_lastTime.text = lastTime
         }
         
-        if let lastTime = self.store?.object(forKey: "bottle_lastTime") as! String? {
+        if let lastTime = EventTimes.fetchTime(for: EventType.bottle_lastTime) {
             bottle_lastTime.text = lastTime
         }
         
-        if let lastTime = self.store?.object(forKey: "sleep_lastTime") as! String? {
+        if let lastTime = EventTimes.fetchTime(for: EventType.sleep_lastTime) {
             sleep_lastTime.text = lastTime
         }
     }

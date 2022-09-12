@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		8762600128CEBAAF004290FA /* Bradley Hand Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8762600028CEBAAF004290FA /* Bradley Hand Bold.ttf */; };
+		8762600828CEDEEE004290FA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8762600628CEDEEE004290FA /* Interface.storyboard */; };
+		8762600A28CEDEEF004290FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8762600928CEDEEF004290FA /* Assets.xcassets */; };
+		8762601028CEDEEF004290FA /* InfantEventTrackerWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8762600F28CEDEEF004290FA /* InfantEventTrackerWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8762601528CEDEEF004290FA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762601428CEDEEF004290FA /* InterfaceController.swift */; };
+		8762601728CEDEEF004290FA /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762601628CEDEEF004290FA /* ExtensionDelegate.swift */; };
+		8762601928CEDEEF004290FA /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762601828CEDEEF004290FA /* NotificationController.swift */; };
+		8762601B28CEDEEF004290FA /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762601A28CEDEEF004290FA /* ComplicationController.swift */; };
+		8762601D28CEDEEF004290FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8762601C28CEDEEF004290FA /* Assets.xcassets */; };
+		8762602928CEDEEF004290FA /* InfantEventTrackerWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762602828CEDEEF004290FA /* InfantEventTrackerWatchTests.swift */; };
+		8762603328CEDEEF004290FA /* InfantEventTrackerWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762603228CEDEEF004290FA /* InfantEventTrackerWatchUITests.swift */; };
+		8762603528CEDEEF004290FA /* InfantEventTrackerWatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762603428CEDEEF004290FA /* InfantEventTrackerWatchUITestsLaunchTests.swift */; };
+		8762603828CEDEEF004290FA /* InfantEventTrackerWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8762600428CEDEEE004290FA /* InfantEventTrackerWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8762604828CEE36F004290FA /* EventTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8762604728CEE36F004290FA /* EventTimes.swift */; };
 		87783F681A3EF21C00D061E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87783F671A3EF21C00D061E2 /* AppDelegate.swift */; };
 		87783F6A1A3EF21C00D061E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87783F691A3EF21C00D061E2 /* ViewController.swift */; };
 		87783F6F1A3EF21C00D061E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87783F6E1A3EF21C00D061E2 /* Images.xcassets */; };
@@ -18,6 +31,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8762601128CEDEEF004290FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87783F5A1A3EF21C00D061E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8762600E28CEDEEF004290FA;
+			remoteInfo = "InfantEventTrackerWatch WatchKit Extension";
+		};
+		8762602528CEDEEF004290FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87783F5A1A3EF21C00D061E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8762600E28CEDEEF004290FA;
+			remoteInfo = "InfantEventTrackerWatch WatchKit Extension";
+		};
+		8762602F28CEDEEF004290FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87783F5A1A3EF21C00D061E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8762600328CEDEEE004290FA;
+			remoteInfo = InfantEventTrackerWatch;
+		};
+		8762603628CEDEEF004290FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87783F5A1A3EF21C00D061E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8762600328CEDEEE004290FA;
+			remoteInfo = InfantEventTrackerWatch;
+		};
 		87783F781A3EF21C00D061E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 87783F5A1A3EF21C00D061E2 /* Project object */;
@@ -27,8 +68,50 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8762603928CEDEEF004290FA /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				8762603828CEDEEF004290FA /* InfantEventTrackerWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762603C28CEDEEF004290FA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8762601028CEDEEF004290FA /* InfantEventTrackerWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8762600028CEBAAF004290FA /* Bradley Hand Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bradley Hand Bold.ttf"; sourceTree = "<group>"; };
+		8762600428CEDEEE004290FA /* InfantEventTrackerWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfantEventTrackerWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8762600728CEDEEE004290FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		8762600928CEDEEF004290FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8762600F28CEDEEF004290FA /* InfantEventTrackerWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "InfantEventTrackerWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8762601428CEDEEF004290FA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		8762601628CEDEEF004290FA /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		8762601828CEDEEF004290FA /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		8762601A28CEDEEF004290FA /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		8762601C28CEDEEF004290FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8762601E28CEDEEF004290FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8762601F28CEDEEF004290FA /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8762602428CEDEEF004290FA /* InfantEventTrackerWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfantEventTrackerWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8762602828CEDEEF004290FA /* InfantEventTrackerWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfantEventTrackerWatchTests.swift; sourceTree = "<group>"; };
+		8762602E28CEDEEF004290FA /* InfantEventTrackerWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfantEventTrackerWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8762603228CEDEEF004290FA /* InfantEventTrackerWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfantEventTrackerWatchUITests.swift; sourceTree = "<group>"; };
+		8762603428CEDEEF004290FA /* InfantEventTrackerWatchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfantEventTrackerWatchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8762604728CEE36F004290FA /* EventTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTimes.swift; sourceTree = "<group>"; };
 		87783F621A3EF21C00D061E2 /* InfantEventTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfantEventTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87783F661A3EF21C00D061E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87783F671A3EF21C00D061E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +127,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8762600C28CEDEEF004290FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762602128CEDEEF004290FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762602B28CEDEEF004290FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		87783F5F1A3EF21C00D061E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,6 +169,7 @@
 		8729AA0828CE855A00D3EE5D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8762604728CEE36F004290FA /* EventTimes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -86,11 +191,55 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		8762600528CEDEEE004290FA /* InfantEventTrackerWatch */ = {
+			isa = PBXGroup;
+			children = (
+				8762600628CEDEEE004290FA /* Interface.storyboard */,
+				8762600928CEDEEF004290FA /* Assets.xcassets */,
+			);
+			path = InfantEventTrackerWatch;
+			sourceTree = "<group>";
+		};
+		8762601328CEDEEF004290FA /* InfantEventTrackerWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8762601428CEDEEF004290FA /* InterfaceController.swift */,
+				8762601628CEDEEF004290FA /* ExtensionDelegate.swift */,
+				8762601828CEDEEF004290FA /* NotificationController.swift */,
+				8762601A28CEDEEF004290FA /* ComplicationController.swift */,
+				8762601C28CEDEEF004290FA /* Assets.xcassets */,
+				8762601E28CEDEEF004290FA /* Info.plist */,
+				8762601F28CEDEEF004290FA /* PushNotificationPayload.apns */,
+			);
+			path = "InfantEventTrackerWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		8762602728CEDEEF004290FA /* InfantEventTrackerWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				8762602828CEDEEF004290FA /* InfantEventTrackerWatchTests.swift */,
+			);
+			path = InfantEventTrackerWatchTests;
+			sourceTree = "<group>";
+		};
+		8762603128CEDEEF004290FA /* InfantEventTrackerWatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8762603228CEDEEF004290FA /* InfantEventTrackerWatchUITests.swift */,
+				8762603428CEDEEF004290FA /* InfantEventTrackerWatchUITestsLaunchTests.swift */,
+			);
+			path = InfantEventTrackerWatchUITests;
+			sourceTree = "<group>";
+		};
 		87783F591A3EF21C00D061E2 = {
 			isa = PBXGroup;
 			children = (
 				87783F641A3EF21C00D061E2 /* InfantEventTracker */,
 				87783F7A1A3EF21C00D061E2 /* InfantEventTrackerTests */,
+				8762600528CEDEEE004290FA /* InfantEventTrackerWatch */,
+				8762601328CEDEEF004290FA /* InfantEventTrackerWatch WatchKit Extension */,
+				8762602728CEDEEF004290FA /* InfantEventTrackerWatchTests */,
+				8762603128CEDEEF004290FA /* InfantEventTrackerWatchUITests */,
 				87783F631A3EF21C00D061E2 /* Products */,
 				8791DD3228CA5DB7009E6AA6 /* Frameworks */,
 			);
@@ -101,6 +250,10 @@
 			children = (
 				87783F621A3EF21C00D061E2 /* InfantEventTracker.app */,
 				87783F771A3EF21C00D061E2 /* InfantEventTrackerTests.xctest */,
+				8762600428CEDEEE004290FA /* InfantEventTrackerWatch.app */,
+				8762600F28CEDEEF004290FA /* InfantEventTrackerWatch WatchKit Extension.appex */,
+				8762602428CEDEEF004290FA /* InfantEventTrackerWatchTests.xctest */,
+				8762602E28CEDEEF004290FA /* InfantEventTrackerWatchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +317,76 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8762600328CEDEEE004290FA /* InfantEventTrackerWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8762604428CEDEEF004290FA /* Build configuration list for PBXNativeTarget "InfantEventTrackerWatch" */;
+			buildPhases = (
+				8762600228CEDEEE004290FA /* Resources */,
+				8762603C28CEDEEF004290FA /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8762601228CEDEEF004290FA /* PBXTargetDependency */,
+			);
+			name = InfantEventTrackerWatch;
+			productName = InfantEventTrackerWatch;
+			productReference = 8762600428CEDEEE004290FA /* InfantEventTrackerWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		8762600E28CEDEEF004290FA /* InfantEventTrackerWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8762604328CEDEEF004290FA /* Build configuration list for PBXNativeTarget "InfantEventTrackerWatch WatchKit Extension" */;
+			buildPhases = (
+				8762600B28CEDEEF004290FA /* Sources */,
+				8762600C28CEDEEF004290FA /* Frameworks */,
+				8762600D28CEDEEF004290FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "InfantEventTrackerWatch WatchKit Extension";
+			productName = "InfantEventTrackerWatch WatchKit Extension";
+			productReference = 8762600F28CEDEEF004290FA /* InfantEventTrackerWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		8762602328CEDEEF004290FA /* InfantEventTrackerWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8762604528CEDEEF004290FA /* Build configuration list for PBXNativeTarget "InfantEventTrackerWatchTests" */;
+			buildPhases = (
+				8762602028CEDEEF004290FA /* Sources */,
+				8762602128CEDEEF004290FA /* Frameworks */,
+				8762602228CEDEEF004290FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8762602628CEDEEF004290FA /* PBXTargetDependency */,
+			);
+			name = InfantEventTrackerWatchTests;
+			productName = InfantEventTrackerWatchTests;
+			productReference = 8762602428CEDEEF004290FA /* InfantEventTrackerWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8762602D28CEDEEF004290FA /* InfantEventTrackerWatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8762604628CEDEEF004290FA /* Build configuration list for PBXNativeTarget "InfantEventTrackerWatchUITests" */;
+			buildPhases = (
+				8762602A28CEDEEF004290FA /* Sources */,
+				8762602B28CEDEEF004290FA /* Frameworks */,
+				8762602C28CEDEEF004290FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8762603028CEDEEF004290FA /* PBXTargetDependency */,
+			);
+			name = InfantEventTrackerWatchUITests;
+			productName = InfantEventTrackerWatchUITests;
+			productReference = 8762602E28CEDEEF004290FA /* InfantEventTrackerWatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		87783F611A3EF21C00D061E2 /* InfantEventTracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87783F811A3EF21C00D061E2 /* Build configuration list for PBXNativeTarget "InfantEventTracker" */;
@@ -171,10 +394,12 @@
 				87783F5E1A3EF21C00D061E2 /* Sources */,
 				87783F5F1A3EF21C00D061E2 /* Frameworks */,
 				87783F601A3EF21C00D061E2 /* Resources */,
+				8762603928CEDEEF004290FA /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8762603728CEDEEF004290FA /* PBXTargetDependency */,
 			);
 			name = InfantEventTracker;
 			productName = InfantEventTracker;
@@ -205,9 +430,32 @@
 		87783F5A1A3EF21C00D061E2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "Andrew Schools";
 				TargetAttributes = {
+					8762600328CEDEEE004290FA = {
+						CreatedOnToolsVersion = 13.4.1;
+						DevelopmentTeam = EXNPD7WA7S;
+						ProvisioningStyle = Automatic;
+					};
+					8762600E28CEDEEF004290FA = {
+						CreatedOnToolsVersion = 13.4.1;
+						DevelopmentTeam = EXNPD7WA7S;
+						ProvisioningStyle = Automatic;
+					};
+					8762602328CEDEEF004290FA = {
+						CreatedOnToolsVersion = 13.4.1;
+						DevelopmentTeam = EXNPD7WA7S;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8762600E28CEDEEF004290FA;
+					};
+					8762602D28CEDEEF004290FA = {
+						CreatedOnToolsVersion = 13.4.1;
+						DevelopmentTeam = EXNPD7WA7S;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8762600328CEDEEE004290FA;
+					};
 					87783F611A3EF21C00D061E2 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = EXNPD7WA7S;
@@ -241,11 +489,46 @@
 			targets = (
 				87783F611A3EF21C00D061E2 /* InfantEventTracker */,
 				87783F761A3EF21C00D061E2 /* InfantEventTrackerTests */,
+				8762600328CEDEEE004290FA /* InfantEventTrackerWatch */,
+				8762600E28CEDEEF004290FA /* InfantEventTrackerWatch WatchKit Extension */,
+				8762602328CEDEEF004290FA /* InfantEventTrackerWatchTests */,
+				8762602D28CEDEEF004290FA /* InfantEventTrackerWatchUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8762600228CEDEEE004290FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8762600A28CEDEEF004290FA /* Assets.xcassets in Resources */,
+				8762600828CEDEEE004290FA /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762600D28CEDEEF004290FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8762601D28CEDEEF004290FA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762602228CEDEEF004290FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762602C28CEDEEF004290FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		87783F601A3EF21C00D061E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,12 +550,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8762600B28CEDEEF004290FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8762601928CEDEEF004290FA /* NotificationController.swift in Sources */,
+				8762601B28CEDEEF004290FA /* ComplicationController.swift in Sources */,
+				8762601728CEDEEF004290FA /* ExtensionDelegate.swift in Sources */,
+				8762601528CEDEEF004290FA /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762602028CEDEEF004290FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8762602928CEDEEF004290FA /* InfantEventTrackerWatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8762602A28CEDEEF004290FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8762603528CEDEEF004290FA /* InfantEventTrackerWatchUITestsLaunchTests.swift in Sources */,
+				8762603328CEDEEF004290FA /* InfantEventTrackerWatchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		87783F5E1A3EF21C00D061E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				87783F6A1A3EF21C00D061E2 /* ViewController.swift in Sources */,
 				87783F681A3EF21C00D061E2 /* AppDelegate.swift in Sources */,
+				8762604828CEE36F004290FA /* EventTimes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +599,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8762601228CEDEEF004290FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8762600E28CEDEEF004290FA /* InfantEventTrackerWatch WatchKit Extension */;
+			targetProxy = 8762601128CEDEEF004290FA /* PBXContainerItemProxy */;
+		};
+		8762602628CEDEEF004290FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8762600E28CEDEEF004290FA /* InfantEventTrackerWatch WatchKit Extension */;
+			targetProxy = 8762602528CEDEEF004290FA /* PBXContainerItemProxy */;
+		};
+		8762603028CEDEEF004290FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8762600328CEDEEE004290FA /* InfantEventTrackerWatch */;
+			targetProxy = 8762602F28CEDEEF004290FA /* PBXContainerItemProxy */;
+		};
+		8762603728CEDEEF004290FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8762600328CEDEEE004290FA /* InfantEventTrackerWatch */;
+			targetProxy = 8762603628CEDEEF004290FA /* PBXContainerItemProxy */;
+		};
 		87783F791A3EF21C00D061E2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 87783F611A3EF21C00D061E2 /* InfantEventTracker */;
@@ -295,6 +627,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8762600628CEDEEE004290FA /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8762600728CEDEEE004290FA /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		87783F701A3EF21C00D061E2 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -314,6 +654,282 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8762603A28CEDEEF004290FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = EXNPD7WA7S;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = InfantEventTrackerWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = InfantEventTrackerWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = Schools.InfantEventTracker;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Schools.InfantEventTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		8762603B28CEDEEF004290FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = EXNPD7WA7S;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = InfantEventTrackerWatch_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = InfantEventTrackerWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = Schools.InfantEventTracker;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Schools.InfantEventTracker.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		8762603D28CEDEEF004290FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = EXNPD7WA7S;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "InfantEventTrackerWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "InfantEventTrackerWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Andrew Schools. All rights reserved.";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Schools.InfantEventTracker.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		8762603E28CEDEEF004290FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = EXNPD7WA7S;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "InfantEventTrackerWatch WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "InfantEventTrackerWatch WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Andrew Schools. All rights reserved.";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Schools.InfantEventTracker.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		8762603F28CEDEEF004290FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = EXNPD7WA7S;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Schools.InfantEventTracker.InfantEventTrackerWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfantEventTrackerWatch WatchKit Extension.appex/InfantEventTrackerWatch WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		8762604028CEDEEF004290FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = EXNPD7WA7S;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Schools.InfantEventTracker.InfantEventTrackerWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfantEventTrackerWatch WatchKit Extension.appex/InfantEventTrackerWatch WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		8762604128CEDEEF004290FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = EXNPD7WA7S;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Schools.InfantEventTracker.InfantEventTrackerWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = InfantEventTrackerWatch;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		8762604228CEDEEF004290FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = EXNPD7WA7S;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = Schools.InfantEventTracker.InfantEventTrackerWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = InfantEventTrackerWatch;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
 		87783F7F1A3EF21C00D061E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -506,6 +1122,42 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8762604328CEDEEF004290FA /* Build configuration list for PBXNativeTarget "InfantEventTrackerWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8762603D28CEDEEF004290FA /* Debug */,
+				8762603E28CEDEEF004290FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8762604428CEDEEF004290FA /* Build configuration list for PBXNativeTarget "InfantEventTrackerWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8762603A28CEDEEF004290FA /* Debug */,
+				8762603B28CEDEEF004290FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8762604528CEDEEF004290FA /* Build configuration list for PBXNativeTarget "InfantEventTrackerWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8762603F28CEDEEF004290FA /* Debug */,
+				8762604028CEDEEF004290FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8762604628CEDEEF004290FA /* Build configuration list for PBXNativeTarget "InfantEventTrackerWatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8762604128CEDEEF004290FA /* Debug */,
+				8762604228CEDEEF004290FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		87783F5D1A3EF21C00D061E2 /* Build configuration list for PBXProject "InfantEventTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
