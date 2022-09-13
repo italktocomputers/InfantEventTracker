@@ -20,9 +20,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
+
 import XCTest
 
-class InfantEventTrackerWatchUITests: XCTestCase {
+class InfantEventTrackerUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -36,13 +37,40 @@ class InfantEventTrackerWatchUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    
+    func testButtonsHaveCorrectLabels() {
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(app.buttons.staticTexts["Diaper Change"].exists)
+        XCTAssert(app.buttons.staticTexts["Feed Baby"].exists)
+        XCTAssert(app.buttons.staticTexts["Sleep"].exists)
+        XCTAssert(app.buttons.staticTexts["Wet Diaper Change"].exists)
+    }
+    
+    func checkLastTimeLabel(app: XCUIApplication, labelIdentifier: String, buttonText: String) {
+        let lastTime = app.staticTexts.element(matching: .any, identifier: labelIdentifier).label
+        print("last time===========\(lastTime)")
+        app.buttons.staticTexts[buttonText].tap()
+        let newLastTime = app.staticTexts.element(matching: .any, identifier: labelIdentifier).label
+        print("new last time===========\(newLastTime)")
+        XCTAssertNotEqual(lastTime, newLastTime)
+        checkLastTimeLabelIsDate(lastTime)
+        checkLastTimeLabelIsDate(newLastTime)
+    }
+    
+    func checkLastTimeLabelIsDate(_ date: String) {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "hh:mm:ss"
+        XCTAssert(dateFormatterGet.date(from: date) != nil)
+    }
+    
+    func testLastTimeLabelsAreUpdated() {
+        let app = XCUIApplication()
+        app.launch()
+        checkLastTimeLabel(app: app, labelIdentifier: "diaperChangeLabel", buttonText: "Diaper Change")
+        checkLastTimeLabel(app: app, labelIdentifier: "wetDiaperChangeLabel", buttonText: "Wet Diaper Change")
+        checkLastTimeLabel(app: app, labelIdentifier: "bottleLabel", buttonText: "Feed Baby")
+        checkLastTimeLabel(app: app, labelIdentifier: "sleepLabel", buttonText: "Sleep")
     }
 
     func testLaunchPerformance() throws {

@@ -32,6 +32,12 @@
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="diaperChangeButton" destination="XiZ-34-DyL" id="ltu-IG-aaI"/>
+                        <outlet property="feedBabyButton" destination="zYW-B8-tl0" id="cC8-nK-k8U"/>
+                        <outlet property="sleepButton" destination="GkC-j4-Zhv" id="pFE-P0-4h3"/>
+                        <outlet property="wetDiaperChangeButton" destination="vBS-Ox-lQP" id="OMx-mw-e4j"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="136" y="264"/>

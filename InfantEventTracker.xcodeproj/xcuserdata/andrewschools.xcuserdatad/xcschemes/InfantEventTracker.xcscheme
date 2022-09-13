@@ -61,6 +61,16 @@
                ReferencedContainer = "container:InfantEventTracker.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8766C86F28D0DDA10080BB14"
+               BuildableName = "InfantEventTrackerUITests.xctest"
+               BlueprintName = "InfantEventTrackerUITests"
+               ReferencedContainer = "container:InfantEventTracker.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
