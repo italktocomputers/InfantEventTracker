@@ -37,15 +37,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottle_Button: UIButton!
     @IBOutlet weak var sleep_Button: UIButton!
     
-    var store: NSUbiquitousKeyValueStore?
+    var viewModel = ViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad();
         self.title = "Infant Event Tracker";
-        
-        EventTimes.observeStore(notify: syncTimes)
         syncTimes()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,25 +51,25 @@ class ViewController: UIViewController {
     
     @IBAction func setTimeForDiaperWet(sender: AnyObject) {
         let date = Date();
-        EventTimes.triggerEvent(on: Date(), for: EventType.diaperwet_lastTime)
+        viewModel.saveAction(on: date, for: EventType.diaperwet_lastTime)
         updateUI(date: date, label: diaperwet_lastTime)
     }
     
     @IBAction func setTimeForDiaper(sender: AnyObject) {
         let date = Date();
-        EventTimes.triggerEvent(on: Date(), for: EventType.diaper_lastTime)
+        viewModel.saveAction(on: date, for: EventType.diaper_lastTime)
         updateUI(date: date, label: diaper_lastTime)
     }
     
     @IBAction func setTimeForBottle(sender: AnyObject) {
         let date = Date();
-        EventTimes.triggerEvent(on: Date(), for: EventType.bottle_lastTime)
+        viewModel.saveAction(on: date, for: EventType.bottle_lastTime)
         updateUI(date: date, label: bottle_lastTime)
     }
     
     @IBAction func setTimeForSleep(sender: AnyObject) {
         let date = Date();
-        EventTimes.triggerEvent(on: Date(), for: EventType.sleep_lastTime)
+        viewModel.saveAction(on: date, for: EventType.sleep_lastTime)
         updateUI(date: date, label: sleep_lastTime)
     }
     
@@ -84,24 +81,31 @@ class ViewController: UIViewController {
     }
     
     func syncTimes() -> Void {
-        EventTimes.sync()
-        
-        if let lastTime = EventTimes.fetchTime(for: EventType.diaperwet_lastTime) {
-            diaperwet_lastTime.text = lastTime
+        viewModel.getLastTime(for: "diaper_lastTime") { (lastTime: String) in
+            DispatchQueue.main.async {
+                self.diaper_lastTime.text = lastTime
+            }
         }
         
-        if let lastTime = EventTimes.fetchTime(for: EventType.diaper_lastTime) {
-            diaper_lastTime.text = lastTime
+        viewModel.getLastTime(for: "diaperwet_lastTime") { (lastTime: String) in
+            DispatchQueue.main.async {
+                self.diaperwet_lastTime.text = lastTime
+            }
         }
         
-        if let lastTime = EventTimes.fetchTime(for: EventType.bottle_lastTime) {
-            bottle_lastTime.text = lastTime
+        viewModel.getLastTime(for: "bottle_lastTime") { (lastTime: String) in
+            DispatchQueue.main.async {
+                self.bottle_lastTime.text = lastTime
+            }
         }
         
-        if let lastTime = EventTimes.fetchTime(for: EventType.sleep_lastTime) {
-            sleep_lastTime.text = lastTime
+        viewModel.getLastTime(for: "sleep_lastTime") { (lastTime: String) in
+            DispatchQueue.main.async {
+                self.sleep_lastTime.text = lastTime
+            }
         }
     }
+    
     @IBAction func goToHomePage(_ sender: Any) {
         UIApplication.shared.open(URL(string: "https://github.com/italktocomputers")!)
     }

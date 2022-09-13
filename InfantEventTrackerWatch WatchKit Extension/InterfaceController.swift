@@ -11,6 +11,7 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    let viewModel = ViewModel()
 
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
@@ -24,4 +25,20 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
     }
 
+    @IBAction func diaperChange() {
+        
+    }
+    
+    @IBAction func bottle() {
+        let date = Date();
+        viewModel.saveAction(on: date, for: EventType.bottle_lastTime)
+    }
+    
+    @IBAction func didSleep() {
+        
+    }
+    
+    @IBAction func wetDiaperChange() {
+        
+    }
 }

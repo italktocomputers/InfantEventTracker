@@ -6,6 +6,7 @@
 //  Copyright © 2022 Andrew Schools. All rights reserved.
 //
 
+/*
 import Foundation
 
 enum EventType {
@@ -51,3 +52,4 @@ struct EventTimes {
         return nil
     }
 }
+*/

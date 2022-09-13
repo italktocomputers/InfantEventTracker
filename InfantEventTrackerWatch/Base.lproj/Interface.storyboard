@@ -9,12 +9,28 @@
         <!--Interface Controller-->
         <scene sceneID="UjK-Js-moB">
             <objects>
-                <controller id="YxS-os-q4w">
+                <controller id="YxS-os-q4w" customClass="InterfaceController" customModule="InfantEventTrackerWatch_WatchKit_Extension">
                     <items>
-                        <button width="1" alignment="left" title="Diaper Change" id="XiZ-34-DyL"/>
-                        <button width="1" alignment="left" title="Feed Baby" id="zYW-B8-tl0"/>
-                        <button width="1" alignment="left" title="Sleep" id="GkC-j4-Zhv"/>
-                        <button width="1" alignment="left" title="Wet Diaper Change" id="vBS-Ox-lQP"/>
+                        <button width="1" alignment="left" title="Diaper Change" id="XiZ-34-DyL">
+                            <connections>
+                                <action selector="diaperChange" destination="YxS-os-q4w" id="S3X-Yn-rx4"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Feed Baby" id="zYW-B8-tl0">
+                            <connections>
+                                <action selector="bottle" destination="YxS-os-q4w" id="2EK-Ja-2Ya"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Sleep" id="GkC-j4-Zhv">
+                            <connections>
+                                <action selector="didSleep" destination="YxS-os-q4w" id="We8-Ni-uwG"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Wet Diaper Change" id="vBS-Ox-lQP">
+                            <connections>
+                                <action selector="wetDiaperChange" destination="YxS-os-q4w" id="7SD-99-VQW"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>

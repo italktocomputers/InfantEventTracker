@@ -26,8 +26,11 @@
 		87783F6F1A3EF21C00D061E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87783F6E1A3EF21C00D061E2 /* Images.xcassets */; };
 		87783F721A3EF21C00D061E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87783F701A3EF21C00D061E2 /* LaunchScreen.xib */; };
 		87783F7E1A3EF21C00D061E2 /* InfantEventTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87783F7D1A3EF21C00D061E2 /* InfantEventTrackerTests.swift */; };
+		8781D6B328CF62DD0069F4E4 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8781D6B228CF62DD0069F4E4 /* CloudKit.framework */; };
+		8781D6B528CF652B0069F4E4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781D6B428CF652B0069F4E4 /* ViewModel.swift */; };
 		8791DD2F28C9B19F009E6AA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8791DD2D28C9B19F009E6AA6 /* Main.storyboard */; };
 		8791DD3428CA5DB7009E6AA6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8791DD3328CA5DB7009E6AA6 /* CloudKit.framework */; };
+		87DD1ECA28D0513800B6F941 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781D6B428CF652B0069F4E4 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,9 @@
 		87783F7C1A3EF21C00D061E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87783F7D1A3EF21C00D061E2 /* InfantEventTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfantEventTrackerTests.swift; sourceTree = "<group>"; };
 		87783F871A3EF3BB00D061E2 /* InfantEventTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = InfantEventTracker.entitlements; sourceTree = "<group>"; };
+		8781D6B128CF627A0069F4E4 /* InfantEventTrackerWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "InfantEventTrackerWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		8781D6B228CF62DD0069F4E4 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		8781D6B428CF652B0069F4E4 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		8791DD2E28C9B19F009E6AA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = InfantEventTracker/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8791DD3328CA5DB7009E6AA6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -131,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8781D6B328CF62DD0069F4E4 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				8762604728CEE36F004290FA /* EventTimes.swift */,
+				8781D6B428CF652B0069F4E4 /* ViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 		8762601328CEDEEF004290FA /* InfantEventTrackerWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8781D6B128CF627A0069F4E4 /* InfantEventTrackerWatch WatchKit Extension.entitlements */,
 				8762601428CEDEEF004290FA /* InterfaceController.swift */,
 				8762601628CEDEEF004290FA /* ExtensionDelegate.swift */,
 				8762601828CEDEEF004290FA /* NotificationController.swift */,
@@ -301,6 +310,7 @@
 		8791DD3228CA5DB7009E6AA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8781D6B228CF62DD0069F4E4 /* CloudKit.framework */,
 				8791DD3328CA5DB7009E6AA6 /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -554,6 +564,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87DD1ECA28D0513800B6F941 /* ViewModel.swift in Sources */,
 				8762601928CEDEEF004290FA /* NotificationController.swift in Sources */,
 				8762601B28CEDEEF004290FA /* ComplicationController.swift in Sources */,
 				8762601728CEDEEF004290FA /* ExtensionDelegate.swift in Sources */,
@@ -584,6 +595,7 @@
 			files = (
 				87783F6A1A3EF21C00D061E2 /* ViewController.swift in Sources */,
 				87783F681A3EF21C00D061E2 /* AppDelegate.swift in Sources */,
+				8781D6B528CF652B0069F4E4 /* ViewModel.swift in Sources */,
 				8762604828CEE36F004290FA /* EventTimes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -742,6 +754,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "InfantEventTrackerWatch WatchKit Extension/InfantEventTrackerWatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -750,9 +763,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "InfantEventTrackerWatch WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "InfantEventTrackerWatch WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = InfantEventTrackerWatch_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Andrew Schools. All rights reserved.";
-				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = InfantEventTrackerWatch_WatchKit_Extension.ExtensionDelegate;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -779,6 +792,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "InfantEventTrackerWatch WatchKit Extension/InfantEventTrackerWatch WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -788,9 +802,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "InfantEventTrackerWatch WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "InfantEventTrackerWatch WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = InfantEventTrackerWatch_WatchKit_Extension.ComplicationController;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Andrew Schools. All rights reserved.";
-				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = InfantEventTrackerWatch_WatchKit_Extension.ExtensionDelegate;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
@@ -978,7 +992,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1028,7 +1042,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1047,7 +1061,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EXNPD7WA7S;
 				INFOPLIST_FILE = InfantEventTracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Schools.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1067,7 +1081,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EXNPD7WA7S;
 				INFOPLIST_FILE = InfantEventTracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Schools.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
