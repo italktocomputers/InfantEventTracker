@@ -29,7 +29,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infant Event Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXG-8z-S46">
                                         <rect key="frame" x="0.0" y="0.0" width="323" height="37.5"/>
                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="30"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemIndigoColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5sk-Lr-fNa">
@@ -44,15 +44,9 @@
                                                 <state key="normal" title="Diaper Change">
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                 </state>
-                                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                                <buttonConfiguration key="configuration" style="filled" title="Diaper Change" cornerStyle="capsule">
                                                     <backgroundConfiguration key="background"/>
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Diaper Change">
-                                                            <attributes>
-                                                                <font key="NSFont" size="24" name="BradleyHandITCTT-Bold"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                    <fontDescription key="titleFontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="24"/>
                                                     <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
@@ -86,15 +80,9 @@
                                                 <state key="normal" title="Feed Baby">
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                 </state>
-                                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                                <buttonConfiguration key="configuration" style="filled" title="Feed Baby" cornerStyle="capsule">
                                                     <backgroundConfiguration key="background"/>
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Feed Baby">
-                                                            <attributes>
-                                                                <font key="NSFont" size="24" name="BradleyHandITCTT-Bold"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                    <fontDescription key="titleFontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="24"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -108,7 +96,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="26.5"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="bottleLabel"/>
                                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -127,15 +115,9 @@
                                                 <state key="normal" title="Sleep">
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                 </state>
-                                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                                <buttonConfiguration key="configuration" style="filled" title="Sleep" cornerStyle="capsule">
                                                     <backgroundConfiguration key="background"/>
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Sleep">
-                                                            <attributes>
-                                                                <font key="NSFont" size="24" name="BradleyHandITCTT-Bold"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                    <fontDescription key="titleFontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="24"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -149,7 +131,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="26.5"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="sleepLabel"/>
                                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -168,15 +150,9 @@
                                                 <state key="normal" title="Wet Diaper Change">
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                 </state>
-                                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                                <buttonConfiguration key="configuration" style="filled" title="Wet Diaper Change" cornerStyle="capsule">
                                                     <backgroundConfiguration key="background"/>
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Wet Diaper Change">
-                                                            <attributes>
-                                                                <font key="NSFont" size="24" name="BradleyHandITCTT-Bold"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                    <fontDescription key="titleFontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="24"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -190,7 +166,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="26.5"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="wetDiaperChangeLabel"/>
                                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -200,14 +176,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgJ-Ux-Yy0">
                                         <rect key="frame" x="0.0" y="435.5" width="323" height="31.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="https://github.com/italktocomputers">
-                                                    <attributes>
-                                                        <font key="NSFont" size="14" name="BradleyHandITCTT-Bold"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="plain" title="https://github.com/italktocomputers">
+                                            <fontDescription key="titleFontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="14"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -251,6 +221,9 @@
         </systemColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
